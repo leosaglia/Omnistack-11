@@ -26,7 +26,7 @@ dando a possibilidade de entrar em contato com a ONG respons√°vel por ele atrav√
 
 <div display="flex" align="center">
 <img src="https://user-images.githubusercontent.com/42787747/77835879-f9688680-712f-11ea-92cd-0434c01c9d47.jpg" width="200">
-<img src="https://user-images.githubusercontent.com/42787747/77835881-fa011d00-712f-11ea-868c-80f88a41c9a0.jpg" width="200">
 <img src="https://user-images.githubusercontent.com/42787747/77835912-4a787a80-7130-11ea-9dac-d5d456671e80.jpg" width="200">
+<img src="https://user-images.githubusercontent.com/42787747/77835881-fa011d00-712f-11ea-868c-80f88a41c9a0.jpg" width="200">
 
 </div>
