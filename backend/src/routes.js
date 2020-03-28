@@ -1,11 +1,10 @@
-import { Router } from 'express';
-import { celebrate, Segments, Joi } from 'celebrate'; //https://hapi.dev/tutorials/validation/?lang=en_US
+const { Router } = require('express');
+const { celebrate, Segments, Joi } = require('celebrate'); //https://hapi.dev/tutorials/validation/?lang=en_US
 
-import app from './index';
-import OngController from './controllers/OngController';
-import IncidentController from './controllers/IncidentController';
-import ProfileController from './controllers/ProfileController';
-import SessionController from './controllers/SessionController';
+const OngController = require('./controllers/OngController');
+const IncidentController = require('./controllers/IncidentController');
+const ProfileController = require('./controllers/ProfileController');
+const SessionController = require('./controllers/SessionController');
 
 const routes = new Router();
 
@@ -24,7 +23,7 @@ routes.post('/ongs', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),
         email: Joi.string().required().email(),
-        whatsapp: Joi.number().required().min(10).max(11),
+        whatsapp: Joi.string().required().min(10).max(11),
         city: Joi.string().required(),
         uf: Joi.string().required().length(2),
     })
@@ -66,4 +65,4 @@ routes.delete('/incidents/:id', celebrate({
     }).unknown()
 }),IncidentController.delete);
 
-export default routes;
+module.exports = routes;
